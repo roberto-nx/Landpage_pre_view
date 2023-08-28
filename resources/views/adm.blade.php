@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    @vite('resources/css/app.css')
 </head>
-<body>
-<p>Titulo atual:</p>
+<body class=" h-screen w-full bg-slate-200">
+<div class="flex flex-rol justify-center space-x-4 my-8 mx-8 border-y-4 border-indigo-500 bg-slate-400">
+
+
+<p >Titulo atual:{{$viewinfo->titulo}}</p>
 @if($viewinfo)
-<p>{{$viewinfo->titulo}}</p>
-@else
-<p></p>
-@endif
+<p >Texto para ação atual:{{$viewinfo->action_text}}<p>
+@endif 
 <p>imagem atual:</p>
-@if($viewinfo)
-<img src="/images/{{ $viewinfo->nomeimg }}.jpg">
-@else
-<img>
-@endif
-<p>Texto para ação atual:<p>
-@if($viewinfo)
-<p>{{$viewinfo->action_text}}<p>
-<div>
-@endif  
-<form action="{{ route('salvar') }}" method="POST" enctype="multipart/form-data">
+<img src="/images/{{ $viewinfo->nomeimg }}.jpg" class="h-40 ">
+</div>
+<div class="flex justify-center  " >
+<form  class="flex flex-col  w-1/3 " action="{{ route('admUpdate'),$viewinfo->id }}" method="POST" enctype="multipart/form-data">
 @csrf
 <label  for = "titulo" >Titulo da pagina  </label >
 <input type="text" name="titulo" > </input>
@@ -32,14 +27,9 @@
 <label  for = "img" >Imagem da pagina  </label >
 <input type="file" name="img" > </input>
 <label  for = "action_text" >Texto para ação  </label >
-<input type="text" name="action_text" > </input>
-<button type="submit" value="Submit">Cadastrar</button>
+<input type="text" name="action_text" > </input><br>
+<button type="submit" value="Submit" class="bg-cyan-600">Cadastrar</button>
 </form>
 </div>
-<div>
-</div>
-
-
-
 </body>
 </html>
