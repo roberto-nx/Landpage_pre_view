@@ -13,7 +13,7 @@
 @else
 @endif
 
-<form class="col-start-4 flex flex-col " method="POST">
+<form class="col-start-4 flex flex-col w-32 sm:w-full " method="POST">
 @csrf
 <label  for = "nome" >Nome  </label > 
 <input type="text" name = "nome" > </input> 

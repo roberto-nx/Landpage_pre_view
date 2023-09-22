@@ -7,12 +7,12 @@
     @vite('resources/css/app.css')
 </head>
 <body class=" h-screen w-full bg-slate-200">
-<div class="flex flex-rol justify-center space-x-4 my-8 mx-8 border-y-4 border-indigo-500 bg-slate-400">
+<div class="flex flex-col sm:flex-row   justify-center sm:space-x-4 my-8 sm:mx-8 border-y-4 border-indigo-500 bg-slate-400">
 
 
-<p >Titulo atual:{{$viewinfo->titulo}}</p>
+<p >Titulo atual: {{$viewinfo->titulo}}</p>
 @if($viewinfo)
-<p >Texto para ação atual:{{$viewinfo->action_text}}<p>
+<p >Texto para ação atual: {{$viewinfo->action_text}}<p>
 @endif 
 <p>imagem atual:</p>
 <img src="/images/{{ $viewinfo->nomeimg }}.jpg" class="h-40 ">

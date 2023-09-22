@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-<div class="flex flex-col ">
+<div class="flex flex-col  w-50  sm:w-full">
 @if($viewinfo)
 <table class="border-separate border border-slate-400 border-spacing-2">
 <th class="border-collapse border border-slate-400 bg-slate-300">titulo</th>
@@ -29,19 +29,19 @@
 {{$info->action_text}}
 </td>
 <td class="border-collapse border border-slate-400 bg-emerald-200" >
-<a href="{{route('view',$info->id)}}">visualizar</a>
+<a class="flex justify-center " href="{{route('view',$info->id)}}">Visualizar</a>
 </td>
 <td class="border-collapse border border-slate-400 bg-emerald-200">
-<a href="{{route('admShow',$info->id)}}">editar</a>
+<a class="flex justify-center " href="{{route('admShow',$info->id)}}">Editar</a>
 </td>
 <td class="border-collapse border border-slate-400 bg-emerald-200">
-<a href="{{route('delete',$info->id)}}">deletar</a>
+<a class="flex justify-center "href="{{route('delete',$info->id)}}">Deletar</a>
 </td>
 </tr>
 @endforeach
 </table>
 @endif
-<a href="{{route('admCreate')}}" class=" flex w-12 border border-slate-400 bg-cyan-500 self-center ">criar</a>
+<a href="{{route('admCreate')}}" class=" flex justify-center w-12 border border-slate-400 bg-cyan-500 self-center ">Criar</a>
 </div>
 </body>
 </html>

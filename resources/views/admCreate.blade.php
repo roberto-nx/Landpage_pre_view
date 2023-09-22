@@ -18,7 +18,7 @@
 <input type="file" name="img" > </input>
 <label  for = "action_text" >Texto para ação  </label >
 <input type="text" name="action_text" > </input>
-<button type="submit" value="Submit">Cadastrar</button>
+<button class="bg-cyan-500" type="submit" value="Submit">Cadastrar</button>
 </form>
 </div>
 
